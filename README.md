@@ -1,12 +1,22 @@
 # Ask My Screenshots
 
-Local-first semantic search over your screenshot folder. Type *"that error from last Tuesday"* or *"the pricing slide with the bar chart"* — get the screenshots back.
+Private, local-first semantic search for your screenshot library. Type *"that error from last Tuesday"* or *"the pricing slide with the bar chart"* — get the screenshots back.
 
-> **Demo GIF:** Record a 30-second search session and add `docs/demo.gif` here. This is the portfolio money shot.
+## Overview
 
-## Why I built this
+Ask My Screenshots turns folders of screenshots into a searchable knowledge base using **VLM captions**, **OCR**, and **semantic embeddings**. It indexes locally, stores results in SQLite, and provides both CLI and TUI search for fast retrieval without cloud dependencies.
 
-macOS Spotlight OCR-indexes text but not meaning. Rewind is closed, paid, and cloud-hosted. CLIP-only tools miss dense UI text. I wanted a **private, local** pipeline that combines **VLM captions**, **OCR**, and **semantic embeddings** so natural-language queries actually work on real screenshots.
+## Why it matters
+
+Built-in search tools OCR-index text but not meaning. Cloud services trade privacy for convenience. CLIP-only pipelines miss dense UI text. This project combines captions, OCR, and hybrid ranking so natural-language queries work on real-world screenshots while keeping data on-device.
+
+## Key features
+
+- Local-only indexing and storage
+- Hybrid ranking (vector search + BM25 on OCR)
+- Configurable watch mode with debounce
+- `.amsignore` path exclusions
+- CLI and Textual TUI interface
 
 ## Architecture
 
@@ -143,9 +153,9 @@ See [`benchmarks/results.md`](benchmarks/results.md) for committed numbers.
 3. Run: `python tests/eval/run_eval.py --db ./eval.sqlite3`
 4. Report **top-1**, **top-5**, and **MRR** from the JSON output
 
-The bundled eval set has 100 queries across errors, chats, charts, settings, dev tools, and more — most local-AI repos skip this; it signals engineering maturity.
+The bundled eval set has 100 queries across errors, chats, charts, settings, dev tools, and more.
 
-## Deploy (watch at login)
+## Autostart (run at login)
 
 ### Windows Task Scheduler
 
