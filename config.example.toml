@@ -1,9 +1,24 @@
 [models]
-vlm = "qwen2-vl:7b"
+# Use a vision-capable Ollama model (e.g. llava:7b, moondream, qwen2.5vl)
+vlm = "llava:7b"
 embedding = "nomic-embed-text"
-ocr = "tesseract"
+ocr = "tesseract"  # or "paddle" (requires pip install ask-my-screenshots[paddle])
+ollama_base_url = "http://127.0.0.1:11434"
+ollama_timeout_seconds = 120
 
 [index]
-db_path = "./ams.sqlite3"
+# Windows default: %USERPROFILE%\Pictures\Screenshots
+# Linux/macOS default: ~/Screenshots
+screenshot_folder = "%USERPROFILE%\\Pictures\\Screenshots"
+db_path = "%LOCALAPPDATA%\\ams\\ams.sqlite3"
 ocr_workers = 2
+vlm_workers = 1
 thumbnail_size = 256
+ocr_only = false
+
+[query]
+bm25_boost_weight = 0.2
+
+[watch]
+debounce_seconds = 2.0
+recursive = true

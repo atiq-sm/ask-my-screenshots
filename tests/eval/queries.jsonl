@@ -1,2 +1,100 @@
-{"query":"that postgres connection error","expected_contains":"postgres_connection_error"}
-{"query":"the pricing slide with the bar chart","expected_contains":"pricing_slide_bar_chart"}
+{"query": "postgres connection error", "expected_contains": "error_postgres_connection_error.png"}
+{"query": "python traceback", "expected_contains": "error_python_traceback.png"}
+{"query": "404 not found", "expected_contains": "error_404_not_found.png"}
+{"query": "access denied", "expected_contains": "error_access_denied.png"}
+{"query": "timeout exception", "expected_contains": "error_timeout_exception.png"}
+{"query": "null pointer", "expected_contains": "error_null_pointer.png"}
+{"query": "build failed ci", "expected_contains": "error_build_failed_ci.png"}
+{"query": "disk full warning", "expected_contains": "error_disk_full_warning.png"}
+{"query": "ssl certificate error", "expected_contains": "error_ssl_certificate_error.png"}
+{"query": "permission denied chmod", "expected_contains": "error_permission_denied_chmod.png"}
+{"query": "slack dm sarah", "expected_contains": "chat_slack_dm_sarah.png"}
+{"query": "teams meeting invite", "expected_contains": "chat_teams_meeting_invite.png"}
+{"query": "discord nitro", "expected_contains": "chat_discord_nitro.png"}
+{"query": "zoom waiting room", "expected_contains": "chat_zoom_waiting_room.png"}
+{"query": "email inbox unread", "expected_contains": "chat_email_inbox_unread.png"}
+{"query": "whatsapp verification", "expected_contains": "chat_whatsapp_verification.png"}
+{"query": "signal message thread", "expected_contains": "chat_signal_message_thread.png"}
+{"query": "linkedin message recruiter", "expected_contains": "chat_linkedin_message_recruiter.png"}
+{"query": "gmail compose draft", "expected_contains": "chat_gmail_compose_draft.png"}
+{"query": "outlook calendar conflict", "expected_contains": "chat_outlook_calendar_conflict.png"}
+{"query": "pricing slide bar chart", "expected_contains": "chart_pricing_slide_bar_chart.png"}
+{"query": "revenue line graph q3", "expected_contains": "chart_revenue_line_graph_q3.png"}
+{"query": "pie chart market share", "expected_contains": "chart_pie_chart_market_share.png"}
+{"query": "dashboard kpi metrics", "expected_contains": "chart_dashboard_kpi_metrics.png"}
+{"query": "excel pivot table", "expected_contains": "chart_excel_pivot_table.png"}
+{"query": "notion database view", "expected_contains": "chart_notion_database_view.png"}
+{"query": "jira burndown sprint", "expected_contains": "chart_jira_burndown_sprint.png"}
+{"query": "grafana cpu spike", "expected_contains": "chart_grafana_cpu_spike.png"}
+{"query": "tableau sales map", "expected_contains": "chart_tableau_sales_map.png"}
+{"query": "google analytics funnel", "expected_contains": "chart_google_analytics_funnel.png"}
+{"query": "wifi password dialog", "expected_contains": "settings_wifi_password_dialog.png"}
+{"query": "bluetooth pairing", "expected_contains": "settings_bluetooth_pairing.png"}
+{"query": "display resolution 4k", "expected_contains": "settings_display_resolution_4k.png"}
+{"query": "privacy settings camera", "expected_contains": "settings_privacy_settings_camera.png"}
+{"query": "vpn connected status", "expected_contains": "settings_vpn_connected_status.png"}
+{"query": "windows update restart", "expected_contains": "settings_windows_update_restart.png"}
+{"query": "macos system preferences", "expected_contains": "settings_macos_system_preferences.png"}
+{"query": "docker desktop resources", "expected_contains": "settings_docker_desktop_resources.png"}
+{"query": "vscode extensions panel", "expected_contains": "settings_vscode_extensions_panel.png"}
+{"query": "github ssh key", "expected_contains": "settings_github_ssh_key.png"}
+{"query": "vscode terminal npm run", "expected_contains": "dev_vscode_terminal_npm_run.png"}
+{"query": "git merge conflict", "expected_contains": "dev_git_merge_conflict.png"}
+{"query": "github pull request review", "expected_contains": "dev_github_pull_request_review.png"}
+{"query": "stack overflow answer", "expected_contains": "dev_stack_overflow_answer.png"}
+{"query": "docker compose logs", "expected_contains": "dev_docker_compose_logs.png"}
+{"query": "kubernetes pod crash", "expected_contains": "dev_kubernetes_pod_crash.png"}
+{"query": "aws console ec2", "expected_contains": "dev_aws_console_ec2.png"}
+{"query": "terraform plan output", "expected_contains": "dev_terraform_plan_output.png"}
+{"query": "jupyter notebook cell", "expected_contains": "dev_jupyter_notebook_cell.png"}
+{"query": "figma design handoff", "expected_contains": "dev_figma_design_handoff.png"}
+{"query": "twitter meme thread", "expected_contains": "meme_twitter_meme_thread.png"}
+{"query": "reddit front page", "expected_contains": "meme_reddit_front_page.png"}
+{"query": "youtube thumbnail reaction", "expected_contains": "meme_youtube_thumbnail_reaction.png"}
+{"query": "spotify wrapped stats", "expected_contains": "meme_spotify_wrapped_stats.png"}
+{"query": "netflix continue watching", "expected_contains": "meme_netflix_continue_watching.png"}
+{"query": "steam sale banner", "expected_contains": "meme_steam_sale_banner.png"}
+{"query": "twitch chat emotes", "expected_contains": "meme_twitch_chat_emotes.png"}
+{"query": "instagram story filter", "expected_contains": "meme_instagram_story_filter.png"}
+{"query": "tiktok for you page", "expected_contains": "meme_tiktok_for_you_page.png"}
+{"query": "pinterest board ideas", "expected_contains": "meme_pinterest_board_ideas.png"}
+{"query": "chrome new tab", "expected_contains": "ui_chrome_new_tab.png"}
+{"query": "finder file copy", "expected_contains": "ui_finder_file_copy.png"}
+{"query": "task manager cpu", "expected_contains": "ui_task_manager_cpu.png"}
+{"query": "activity monitor memory", "expected_contains": "ui_activity_monitor_memory.png"}
+{"query": "control panel programs", "expected_contains": "ui_control_panel_programs.png"}
+{"query": "spotlight search results", "expected_contains": "ui_spotlight_search_results.png"}
+{"query": "snipping tool overlay", "expected_contains": "ui_snipping_tool_overlay.png"}
+{"query": "sharex upload complete", "expected_contains": "ui_sharex_upload_complete.png"}
+{"query": "lightshot saved", "expected_contains": "ui_lightshot_saved.png"}
+{"query": "greenshot editor", "expected_contains": "ui_greenshot_editor.png"}
+{"query": "pdf invoice march", "expected_contains": "doc_pdf_invoice_march.png"}
+{"query": "word track changes", "expected_contains": "doc_word_track_changes.png"}
+{"query": "powerpoint presenter mode", "expected_contains": "doc_powerpoint_presenter_mode.png"}
+{"query": "notion meeting notes", "expected_contains": "doc_notion_meeting_notes.png"}
+{"query": "confluence page edit", "expected_contains": "doc_confluence_page_edit.png"}
+{"query": "google docs comment", "expected_contains": "doc_google_docs_comment.png"}
+{"query": "obsidian graph view", "expected_contains": "doc_obsidian_graph_view.png"}
+{"query": "evernote clip web", "expected_contains": "doc_evernote_clip_web.png"}
+{"query": "onenote notebook", "expected_contains": "doc_onenote_notebook.png"}
+{"query": "latex overleaf compile", "expected_contains": "doc_latex_overleaf_compile.png"}
+{"query": "steam achievement unlock", "expected_contains": "game_steam_achievement_unlock.png"}
+{"query": "epic games launcher", "expected_contains": "game_epic_games_launcher.png"}
+{"query": "xbox game pass", "expected_contains": "game_xbox_game_pass.png"}
+{"query": "minecraft inventory", "expected_contains": "game_minecraft_inventory.png"}
+{"query": "valorant scoreboard", "expected_contains": "game_valorant_scoreboard.png"}
+{"query": "league of legends shop", "expected_contains": "game_league_of_legends_shop.png"}
+{"query": "fortnite battle pass", "expected_contains": "game_fortnite_battle_pass.png"}
+{"query": "elden ring death screen", "expected_contains": "game_elden_ring_death_screen.png"}
+{"query": "zelda map shrine", "expected_contains": "game_zelda_map_shrine.png"}
+{"query": "pokemon team builder", "expected_contains": "game_pokemon_team_builder.png"}
+{"query": "bank transfer confirmation", "expected_contains": "finance_bank_transfer_confirmation.png"}
+{"query": "paypal receipt", "expected_contains": "finance_paypal_receipt.png"}
+{"query": "stripe dashboard payment", "expected_contains": "finance_stripe_dashboard_payment.png"}
+{"query": "robinhood portfolio", "expected_contains": "finance_robinhood_portfolio.png"}
+{"query": "coinbase bitcoin price", "expected_contains": "finance_coinbase_bitcoin_price.png"}
+{"query": "mint budget category", "expected_contains": "finance_mint_budget_category.png"}
+{"query": "turbotax refund status", "expected_contains": "finance_turbotax_refund_status.png"}
+{"query": "venmo request money", "expected_contains": "finance_venmo_request_money.png"}
+{"query": "credit card statement", "expected_contains": "finance_credit_card_statement.png"}
+{"query": "invoice quickbooks", "expected_contains": "finance_invoice_quickbooks.png"}

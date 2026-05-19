@@ -4,9 +4,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import os
+
 from ams.ingest import index_folder
 from ams.models import ModelPipeline
 from ams.query import search
+
+os.environ.setdefault("AMS_TEST_NO_VEC", "1")
 
 
 class FakeModels(ModelPipeline):

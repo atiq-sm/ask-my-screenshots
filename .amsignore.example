@@ -1,0 +1,10 @@
+# Copy to your screenshot folder as .amsignore (gitignore syntax)
+
+# Personal / sensitive
+private/**
+banking/**
+*.env
+
+# Temp captures
+temp/**
+*.tmp.png

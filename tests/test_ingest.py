@@ -4,9 +4,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import os
+
 from ams.db import Database
-from ams.ingest import index_folder
+from ams.ingest import find_images, index_folder
 from ams.models import ModelPipeline
+
+os.environ.setdefault("AMS_TEST_NO_VEC", "1")
 
 
 class FakeModels(ModelPipeline):
@@ -45,6 +49,17 @@ class IngestTests(unittest.TestCase):
                 self.assertEqual(db.count(), 2)
             finally:
                 db.close()
+
+    def test_amsignore_excludes_files(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / ".amsignore").write_text("skip.png\n", encoding="utf-8")
+            (root / "keep.png").write_bytes(b"fake")
+            (root / "skip.png").write_bytes(b"fake")
+            images = find_images(root)
+            names = {p.name for p in images}
+            self.assertIn("keep.png", names)
+            self.assertNotIn("skip.png", names)
 
 
 if __name__ == "__main__":

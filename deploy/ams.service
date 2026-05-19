@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=%h
-ExecStart=%h/.local/bin/screenshot-search watch %h/Screenshots --db %h/.local/share/ams/ams.sqlite3
+ExecStart=%h/.local/bin/screenshot-search watch --db %h/.local/share/ams/ams.sqlite3
 Restart=always
 RestartSec=3
 

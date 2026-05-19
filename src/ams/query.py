@@ -3,10 +3,9 @@ from __future__ import annotations
 import math
 import re
 
+from .config import AppConfig
 from .db import Database
 from .models import ModelPipeline
-
-BM25_BOOST_WEIGHT = 0.2
 
 
 def _tokenize(text: str) -> list[str]:
@@ -50,8 +49,10 @@ def search(
     top_k: int = 20,
     bm25: bool = True,
     model_pipeline: ModelPipeline | None = None,
+    config: AppConfig | None = None,
 ) -> list[dict]:
-    model_pipeline = model_pipeline or ModelPipeline()
+    config = config or AppConfig()
+    model_pipeline = model_pipeline or ModelPipeline.from_config(config)
     db = Database(db_path)
     try:
         query_embedding = model_pipeline.embed_text(query)
@@ -61,10 +62,9 @@ def search(
 
         if bm25:
             boosts = _bm25_boost(query, hits)
+            weight = config.bm25_boost_weight
             for hit in hits:
-                hit["score"] = hit["similarity"] + (
-                    BM25_BOOST_WEIGHT * boosts.get(hit["path"], 0.0)
-                )
+                hit["score"] = hit["similarity"] + (weight * boosts.get(hit["path"], 0.0))
 
         hits.sort(key=lambda h: h["score"], reverse=True)
         return hits[:top_k]

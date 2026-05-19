@@ -4,14 +4,32 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ask-my-screenshots"
-version = "0.1.0"
+version = "0.2.0"
 description = "Local-first semantic search over screenshots"
 readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
 authors = [
   { name = "atiq-sm" }
 ]
-dependencies = []
+dependencies = [
+  "pillow>=10.0.0",
+  "pytesseract>=0.3.10",
+  "watchdog>=4.0.0",
+  "tomli>=2.0.0; python_version < '3.11'",
+  "sqlite-vec>=0.1.6",
+  "textual>=0.80.0",
+  "pathspec>=0.12.0",
+]
+
+[project.optional-dependencies]
+paddle = [
+  "paddleocr>=2.7.0",
+  "paddlepaddle>=2.6.0",
+]
+dev = [
+  "pytest>=8.0.0",
+]
 
 [project.scripts]
 screenshot-search = "ams.cli:main"
