@@ -9,9 +9,12 @@ from .db import Database, ScreenshotRecord
 from .models import ModelPipeline
 
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".gif", ".tiff"}
+DEFAULT_THUMBNAIL_SIZE = (256, 256)
 
 
-def _create_thumbnail_blob(image_path: Path, size: tuple[int, int] = (256, 256)) -> bytes | None:
+def _create_thumbnail_blob(
+    image_path: Path, size: tuple[int, int] = DEFAULT_THUMBNAIL_SIZE
+) -> bytes | None:
     try:
         from PIL import Image  # type: ignore
 

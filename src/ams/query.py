@@ -6,6 +6,8 @@ import re
 from .db import Database
 from .models import ModelPipeline
 
+BM25_BOOST_WEIGHT = 0.2
+
 
 def _tokenize(text: str) -> list[str]:
     return re.findall(r"[a-zA-Z0-9_]+", text.lower())
@@ -60,7 +62,9 @@ def search(
         if bm25:
             boosts = _bm25_boost(query, hits)
             for hit in hits:
-                hit["score"] = hit["similarity"] + (0.2 * boosts.get(hit["path"], 0.0))
+                hit["score"] = hit["similarity"] + (
+                    BM25_BOOST_WEIGHT * boosts.get(hit["path"], 0.0)
+                )
 
         hits.sort(key=lambda h: h["score"], reverse=True)
         return hits[:top_k]

@@ -5,6 +5,8 @@ from pathlib import Path
 
 from .ingest import index_folder
 
+MIN_POLL_SECONDS = 1
+
 
 def watch_folder(folder: str, db_path: str, poll_seconds: int = 2) -> None:
     """Simple polling-based watch mode with debounce-like behavior."""
@@ -17,4 +19,4 @@ def watch_folder(folder: str, db_path: str, poll_seconds: int = 2) -> None:
         stats = index_folder(root, db_path)
         if stats["indexed"]:
             print(f"Indexed {stats['indexed']} new screenshot(s)")
-        time.sleep(max(1, poll_seconds))
+        time.sleep(max(MIN_POLL_SECONDS, poll_seconds))

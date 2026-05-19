@@ -7,6 +7,8 @@ import re
 import urllib.request
 from pathlib import Path
 
+OLLAMA_TIMEOUT_SECONDS = 2
+
 
 class ModelPipeline:
     def __init__(
@@ -49,7 +51,7 @@ class ModelPipeline:
             method="POST",
         )
         try:
-            with urllib.request.urlopen(req, timeout=2) as resp:
+            with urllib.request.urlopen(req, timeout=OLLAMA_TIMEOUT_SECONDS) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
                 emb = data.get("embedding")
                 if isinstance(emb, list) and emb:
