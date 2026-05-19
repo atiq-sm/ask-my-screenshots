@@ -18,7 +18,11 @@ class FakeModels(ModelPipeline):
 
     def embed_text(self, text: str) -> list[float]:
         tokens = text.lower().split()
-        return [float(tokens.count("error")), float(tokens.count("pricing")), float(len(tokens))]
+        vector = [0.0] * 64
+        vector[0] = float(tokens.count("error"))
+        vector[1] = float(tokens.count("pricing"))
+        vector[2] = float(len(tokens))
+        return vector
 
 
 class IngestTests(unittest.TestCase):

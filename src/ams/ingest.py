@@ -42,6 +42,9 @@ def index_folder(
     model_pipeline: ModelPipeline | None = None,
     ocr_workers: int = 2,
 ) -> dict:
+    if ocr_workers < 1:
+        raise ValueError("ocr_workers must be >= 1")
+
     model_pipeline = model_pipeline or ModelPipeline()
     db = Database(db_path)
     try:
