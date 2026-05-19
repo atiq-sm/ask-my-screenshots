@@ -33,7 +33,7 @@ def _build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
-    argv = list(sys.argv[1:] if argv is None else argv)
+    argv = sys.argv[1:] if argv is None else argv
 
     # Supports: screenshot-search "that postgres connection error"
     if argv and argv[0] not in {"index", "search", "watch", "-h", "--help"}:

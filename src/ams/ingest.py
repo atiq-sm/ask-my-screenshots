@@ -59,7 +59,7 @@ def index_folder(
                 to_index.append((image, mtime))
 
         indexed = 0
-        with ThreadPoolExecutor(max_workers=max(1, ocr_workers)) as ocr_pool:
+        with ThreadPoolExecutor(max_workers=ocr_workers) as ocr_pool:
             ocr_futures = {
                 image: ocr_pool.submit(model_pipeline.ocr_image, image) for image, _ in to_index
             }

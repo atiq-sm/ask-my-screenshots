@@ -7,7 +7,7 @@ import re
 import urllib.request
 from pathlib import Path
 
-OLLAMA_TIMEOUT_SECONDS = 2
+OLLAMA_TIMEOUT_SECONDS = 5
 
 
 class ModelPipeline:
