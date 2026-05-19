@@ -1,0 +1,9 @@
+[models]
+vlm = "qwen2-vl:7b"
+embedding = "nomic-embed-text"
+ocr = "tesseract"
+
+[index]
+db_path = "./ams.sqlite3"
+ocr_workers = 2
+thumbnail_size = 256

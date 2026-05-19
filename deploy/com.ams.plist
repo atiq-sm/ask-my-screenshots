@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.ams.watch</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/bin/screenshot-search</string>
+      <string>watch</string>
+      <string>/Users/you/Screenshots</string>
+      <string>--db</string>
+      <string>/Users/you/.local/share/ams/ams.sqlite3</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+  </dict>
+</plist>
