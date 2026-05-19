@@ -1,0 +1,2 @@
+{"query":"that postgres connection error","expected_contains":"postgres_connection_error"}
+{"query":"the pricing slide with the bar chart","expected_contains":"pricing_slide_bar_chart"}
